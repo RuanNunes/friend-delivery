@@ -4,7 +4,26 @@ This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
-## Running the application in dev mode
+## Running the application in dev mode windows
+### Install Chocolatey
+https://chocolatey.org/install
+### find packages
+https://community.chocolatey.org/packages
+### Install maven
+```shell script
+choco install maven
+```
+### Install Graalvm
+```shell script
+choco install graalvm
+```
+### start in dev mode
+
+```shell script
+mvn quarkus:dev
+```
+
+## Running the application in dev mode linux/mac
 
 You can run your application in dev mode that enables live coding using:
 ```shell script
@@ -33,12 +52,12 @@ The application, packaged as an _über-jar_, is now runnable using `java -jar ta
 
 ## Creating a native executable
 
-You can create a native executable using: 
+You can create a native executable using:
 ```shell script
 ./mvnw package -Pnative
 ```
 
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
+Or, if you don't have GraalVM installed, you can run the native executable build in a container using:
 ```shell script
 ./mvnw package -Pnative -Dquarkus.native.container-build=true
 ```
