@@ -1,5 +1,4 @@
 package ruan.nunes.domain;
-
 import io.quarkus.mongodb.panache.PanacheMongoEntity;
 import io.quarkus.mongodb.panache.common.MongoEntity;
 import lombok.AllArgsConstructor;
@@ -13,6 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class FriendEntity extends PanacheMongoEntity {
     private String name;
+    private String nick_name;
     private String email;
     private String phone;
     private String slack_id;
